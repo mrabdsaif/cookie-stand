@@ -2,8 +2,7 @@
 //  Lab 07  constructor  
 
 
-// this is a template indicates that every object I will create it 
-//using this constructor will have these properities .
+// this is a template indicates that every object I will create it using this constructor will have these properities.
 var hour = ['06-AM', '07-AM', '08-AM', '09-AM', '10-AM', '11-AM', '12-PM', '01-PM', '02-PM', '03-PM', '04-PM', '05-PM', '06-PM', '07-PM'];
 var allBranches = [];
 var totalByArea = 0;
@@ -15,16 +14,15 @@ function CookiesPlatform(area, min, max, averageCookiPerCustomer) {
     this.custPerHour = [];
     this.salesPerHour = [];
     this.dailyTotal = 0;
-    allBranches.push(this); // to pass all these properties ..
+    allBranches.push(this); // to pass all these properties to the main array ..
 };
 console.log(allBranches);
-// we use .prototype to passes/add properties to the constructor... and now we have the random function added to the cookiesPlatform constructor
+// we use .prototype to pass/add properties to the constructor... and now we have the random function added to the cookiesPlatform constructor
 CookiesPlatform.prototype.getrandomNum = function () {
     for (var j = 0; j < hour.length; j++) {
         this.custPerHour.push(Math.floor(Math.random() * (this.max - this.min + 1) + this.min));
-        // console.log(this.hour[j] + ':' + this.custPerHour[j]);
     }
-} // this function will guess the cust per hour ..... using the random number ...
+} // this function will guess the cust per hour for any entries ..... using the random number ...
 
 
 CookiesPlatform.prototype.simulatedAmount = function () {
@@ -93,11 +91,30 @@ var lima = new CookiesPlatform('Lima', 2, 16, 4.6);
 
 //inovke your objects
 // seattle.tablerender();
+//tokyo.tablerender();
+// We pushed them to an array (allbranches)...
 for (var i = 0; i < allBranches.length; i++) {
     allBranches[i].tablerender();
 }
 
 // create footer
+
+var form = document.getElementById('form1');
+form.addEventListener('submit', function submition(event) {
+    event.preventDefault();
+    alert('submitted');
+    console.log(event);
+    var area = event.target.location.value;
+    var min = event.target.numberofcustfield.value;
+    var max = event.target.numberofmaxnumberofcustfield.value;
+    var averageCookiPerCustomer = event.target.soldcookiesfield.value;
+    // creating new opject
+    var abd = new CookiesPlatform(area, min, max, averageCookiPerCustomer);
+    abd.getrandomNum();
+    abd.tablerender();
+});
+
+
 function footerCreate() {
     // this.simulatedAmount();
     var lastrow = document.createElement('tr');
@@ -119,8 +136,28 @@ function footerCreate() {
     for (var i = 0; i < allBranches.length; i++) {
         td.textContent = totalByArea;
     }
+    
 }
 footerCreate();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // How to create an object using the constructor !!!
