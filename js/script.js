@@ -2,7 +2,7 @@
 //  Lab 07  constructor  
 
 
-// this is not an object it is just a template indicates that every object I will create it 
+// this is a template indicates that every object I will create it 
 //using this constructor will have these properities .
 var hour = ['06-AM', '07-AM', '08-AM', '09-AM', '10-AM', '11-AM', '12-PM', '01-PM', '02-PM', '03-PM', '04-PM', '05-PM', '06-PM', '07-PM'];
 var allBranches = [];
@@ -84,7 +84,7 @@ CookiesPlatform.prototype.tablerender = function () {
 
 var seattle = new CookiesPlatform('seattle', 23, 65, 6.3);
 console.log(seattle);
-seattle.simulatedAmount();
+// seattle.simulatedAmount();
 // Now the same for the next location 
 var tokyo = new CookiesPlatform('Tokyo', 3, 24, 1.2);
 var dubi = new CookiesPlatform('Dubai', 11, 38, 3.7);
@@ -99,17 +99,20 @@ for (var i = 0; i < allBranches.length; i++) {
 
 // create footer
 function footerCreate() {
-    
+    // this.simulatedAmount();
     var lastrow = document.createElement('tr');
     table.appendChild(lastrow);
     var td = document.createElement('td');
     lastrow.appendChild(td);
     td.textContent = 'Total';
     for (var j = 0; j < hour.length; j++) {
+        var totalTotal = 0;
+        for (var i = 0; i < allBranches.length; i++) {
+            totalTotal += allBranches[i].salesPerHour[j];
+        }
         var td = document.createElement('td');
         lastrow.appendChild(td);
-        for (var i=0; i<allBranches.length;i++)
-        td.textContent = 'tot';
+        td.textContent = totalTotal;
     }
     var td = document.createElement('td');
     lastrow.appendChild(td);
@@ -117,22 +120,8 @@ function footerCreate() {
         td.textContent = totalByArea;
     }
 }
-
 footerCreate();
 
-// CookiesPlatform.prototype.titlesrender = function () {
-//     var parentElement = document.getElementById('seattlesales');
-//     var article = document.createElement('article');
-//     parentElement.appendChild(article);
-
-//     var h2 = document.createElement('h2');
-//     h2.textContent = this.area;
-//     article.appendChild(h2);
-
-//     var p = document.createElement('p');
-//     p.textContent = 'average Cookies Per Customer : ' + this.averageCookiPerCustomer;
-//     article.appendChild(p);
-// };
 
 // How to create an object using the constructor !!!
 // we put var and the first location ...
