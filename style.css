@@ -4,7 +4,7 @@ margin: 0;
 }
 
 table{
-    border: 1px dashed red;
+    
     border-collapse: collapse;
     width: 80%;
     text-align: center;
@@ -14,70 +14,82 @@ table{
 }
 tr{
     border: 1px solid blanchedalmond;
+    background-color: slategray;
+}
+tr:hover{
+    background-color: silver;
+    color: black;
 }
 td{
-
     border: 1px solid white;
-    background-color: gray;
     color: blanchedalmond;
     text-transform: capitalize;
 }
 td:hover{
-    color: white;
     background-color: black;
-    letter-spacing: 3px;
-}
-th:active{
-background-color: black;
+    color: blanchedalmond;
+    text-transform: capitalize;
+    letter-spacing: 1px;
 }
 a{
     text-decoration: none;
-    color: 10px bold black;
-}
-=======
-    border: 1px solid red;
-}
-a{
     list-style: none;
-    text-decoration: none;
 }
-
-nav{
-    display: inline-block;
-    background-color: gray;
-    width: 100%;
-    height: 75px;
-    margin-bottom: 20px;
-}
-nav ul li{
-    display: inline-block;
-    
-    margin-left: 160px;
-    color: rgb(161, 161, 161);
-    padding-left: 20px;
-    padding-right: 20px;
-    padding: 15px 40px;
-}
-li:hover{
-    background-color: black;
-}
-#active:active{
-    color: black;
-}
-
 #div1{
-background-image: url('https://github.com/LTUC/amman-201d9/blob/master/class-08/lab-b/assets/family.jpg?raw=true');
-width: 940px;
-height: 450px;
-margin: auto;
-margin-bottom: 20px;
-
+    background-color: rgb(110, 110, 110);
 }
-.class1{
-    position: relative;
+nav ul {
+    width: 60%;
+    margin: auto;
+   
 }
-#div2{
+nav ul:hover{
+    box-shadow: 2px 3px 3px 3px black;
+    height: 60px;
+}
+nav ul li {
+    background-color: black;
+    color: burlywood;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 10px;
     
+}
+nav ul li span{
+    padding: 15px 40px;
+    float: right;
+}
+nav ul li span:hover{
+    color: black;
+    background-color: white;
+}
+.img1{
+    display: block;
+    width: 960;
+    height: 450px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.img1:hover{
+    border-radius: 50px;
+    width: 60%;
+    box-shadow: 2px 3px 6px black;
     
 }
 
+footer{
+    background-color: slategray;
+    height: 70px;
+}
+.row{
+    display: flex;
+    width: 57%;
+    margin: auto;
+}
+.row:hover{
+    box-shadow: 2px 3px 3px black;
+    
+}
+.img2{
+    flex: 30%;
+}
