@@ -4,13 +4,13 @@ margin: 0;
 }
 
 table{
-    
     border-collapse: collapse;
     width: 80%;
     text-align: center;
     margin: auto;
     margin-top: 100px;
     height: 50px;
+    font-family: 'Times New Roman', Times, serif;
 }
 tr{
     border: 1px solid blanchedalmond;
@@ -29,31 +29,28 @@ td:hover{
     background-color: black;
     color: blanchedalmond;
     text-transform: capitalize;
-    letter-spacing: 1px;
+    cursor: pointer;
 }
 a{
     text-decoration: none;
     list-style: none;
 }
 #div1{
-    background-color: rgb(110, 110, 110);
+    background-color: rgb(0, 21, 114);
 }
 nav ul {
     width: 60%;
     margin: auto;
    
 }
-nav ul:hover{
-    box-shadow: 2px 3px 3px 3px black;
-    height: 60px;
-}
 nav ul li {
-    background-color: black;
+    background-color: rgb(155, 152, 152);
     color: burlywood;
     text-decoration: none;
     display: inline-block;
-    margin-left: 10px;
-    
+    margin-left: 5px;
+    cursor: pointer;
+    text-transform: capitalize;
 }
 nav ul li span{
     padding: 15px 40px;
@@ -73,13 +70,13 @@ nav ul li span:hover{
 .img1:hover{
     border-radius: 50px;
     width: 60%;
-    box-shadow: 2px 3px 6px black;
-    
+    box-shadow: 1px 2px 3px black;
 }
-
 footer{
-    background-color: slategray;
+    background-color: rgb(3, 35, 66);
     height: 70px;
+    text-align: left;
+    padding: 20px;
 }
 .row{
     display: flex;
@@ -88,12 +85,43 @@ footer{
 }
 .row:hover{
     box-shadow: 2px 3px 3px black;
-    
 }
 .img2{
     flex: 30%;
 }
-
 .fa-map-marker-alt{
     color: blanchedalmond;
+    margin: 10px;
+}
+header nav a {
+    color: black;
+    font: 15px  Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+
+}
+fieldset {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #04752f;
+}
+form input{
+    width: 30%;
+    margin-top: 50px;
+    border: 3px solid rgb(155, 155, 49);
+    border-radius: 4px;
+}
+#submit-but{
+    width: 10%;
+    padding: 5px 75px 5px 30px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+#submit-but:hover{
+    background-color: teal;
+}
+#location{
+    margin-left: 120px;
+    color: white;
+    
 }
